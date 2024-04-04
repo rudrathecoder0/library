@@ -1,0 +1,41 @@
+{% extends "adminparent.html" %}
+{% block body %}
+
+    <div class="row">
+        <h1 style="text-align:center;">ViewBook </h1>   
+        <div class="col-sm-12" style="overflow:scroll;">
+            <table class="table table-bordered text-light  " style="width:60%; margin:auto;">
+                <tr class="table-active table-info table-hover">
+                    <th>Book Id</th>
+                    <th>ISBN NO </th>
+                    <th>Programe</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                    <th>Subject</th>
+                    <th>Bookname</th>
+                    <th>Author Name </th>
+                    <th>Qty</th>
+                    <th>Delete</th>
+                </tr>
+                {% for b in Book %}
+                    <tr>
+                        <td>{{b.bookid}}</td>
+                        <td>{{b.isbnno}}</td>
+                        <td>{{b.programe}}</td>
+                        <td>{{b.branch}}</td>
+                        <td>{{b.year}}</td>
+                        <td>{{b.subject}}</td>
+                        <td>{{b.bookname}}</td>
+                        <td>{{b.authorname}}</td>
+                        <td>{{b.qty}}</td>
+                        <td>
+                            <a href="{% url 'adminapp:deletebook' bookid=b.bookid %}">
+                                <button class="btn btn-danger">Delete</button>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock body %}

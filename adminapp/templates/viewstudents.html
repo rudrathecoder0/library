@@ -1,0 +1,51 @@
+{% extends "adminparent.html" %}
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12" style="overflow-x: scroll;">
+            <h1 style="text-align:center;">Admin Home</h1>   
+            <table class="table table-bordered  text-light">
+                <tr class="table-success">
+                    <td>Roll NO</td>
+                    <td>Name</td>
+                    <td>Father Name</td>
+                    <td>Mother Name</td>
+                    <td>Gender</td>
+                    <td>Address</td>
+                    <td>programe</td>
+                    <td>Branch</td>
+                    <td>year</td>
+                    <td>Contact NO</td>
+                    <td>Email Address</td>
+
+                </tr>
+                
+                    {% for s in student  %}
+                    <tr>
+                        <td>{{s.rollno}}</td>
+                        <td>{{s.name}}</td>
+                        <td>{{s.fname}}</td>
+                        <td>{{s.mname}}</td>
+                        <td>{{s.gender}}</td>
+                        <td>{{s.address}}</td>
+                        <td>{{s.programe}}</td>
+                        <td>{{s.branch}}</td>
+                        <td>{{s.year}}</td>
+                        <td>{{s.contactno}}</td>
+                        <td>{{s.emailaddress}}</td>
+                        
+                        
+                        
+                    </tr>
+                {% endfor %}
+                
+            </table>
+              
+        </div>
+    </div>
+{% endblock body %}
+
+<div class="row">
+    <div class="col sm-12">
+        <h1 style="text-align:center;">Manage Student </h1>
+    </div>
+</div>

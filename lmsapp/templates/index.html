@@ -1,0 +1,214 @@
+{% extends "parent.html" %}
+
+{% block main %}
+{% load static%}
+
+<style>
+    @keyframes new{
+        0%{
+            border:4px  dotted  #ffb12b;
+            color:white;
+
+
+        }
+        50%{
+            border:8px dotted yellow;
+            color:blue;
+
+        }
+
+
+        100%{
+            border:12px dashed orange;
+            color:black;
+        }
+    }
+
+    .highlight{
+        margin-top:118px;
+        height:40px;
+         width:80px;
+        background-color:red; 
+        border-radius: 50%; 
+        font-size:25px; 
+        font-family:cursive; 
+        border:2px solid rgb(0, 255, 208); 
+        animation-name:new; 
+        animation-iteration-count:infinite; 
+        animation-duration:0.7s; 
+        animation-delay: 0.5s;  
+        animation-timing-function:linear;
+
+    }
+
+    
+    .highlight2{
+        margin-top:118px;
+        height:40px;
+         width:80px;
+        background-color:blue; 
+        border-radius: 50%; 
+        font-size:25px; 
+        font-family:cursive; 
+        border:2px solid white; 
+        animation-name:new; 
+        animation-iteration-count:infinite; 
+        animation-duration:0.7s; 
+        animation-delay: 0.5s;  
+        animation-timing-function:linear;
+
+    }
+
+
+    #guidline1:hover{
+        color:purple;
+        font-family: cursive;
+        font-size: 18px;
+    }
+
+    #guidline2:hover{
+        color:purple;
+        font-family: cursive;
+        font-size: 18px;
+        
+    }
+
+    #guidline3:hover{
+        color:purple;
+        font-family: cursive;
+        font-size: 18px;
+    }
+
+    #guidline4:hover{
+        color:green;
+        font-family: cursive;
+        font-size: 18px;
+    }
+</style>
+                                  <!-- information Block  -->
+<h1 style="text-align: center;">General Guidelines</h1>
+<marquee style="height:900px;" onmouseover="stop()" onmouseout="start()"  direction="up">
+<ul >
+<li id="guidline1">For any information, guidance or help required during the period of study, a candidate may write to the Registrar (Examination), Nalanda Open University, 3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 0001, or may contact him on phone no. 2201013 between 3 p.m. to 4 p.m. on any working day. The callers from outside Patna must use the STD telephone code of Patna which is 0612.
+Detailed schedule of examination paper wise with date, and centre name will be given to every student at the time of admission in a print form, printed at the back of his/her Examination Admit Card.
+No candidate is permitted to study, at the same time, more than one course in one session simultaneously.</li><br><br>
+<li id="guidline2">There is no provision of improvement examination in any programme of the Nalanda Open University. As such, students need not bank to improve their performance through improvement examination.
+The rules and regulations given in the prospectus may be amended by the University whenever necessary.</li><br><br>
+<li id="guidline3">In any information given by the candidate is found to be wrong, the admission shall be cancelled and the charges paid shall be forfeited.
+All controversies regarding admission and evaluation shall be subject to the jurisdiction of Patna courts.  </li></ul>
+ <h1 style="text-align: center;">Pattern of examination</h1>
+
+<ul>
+    <li id="guidline4">Each course consists of theory and/or theory and practical papers. Each theory paper shall consist of two parts: </li><br><br>
+
+        <li id="guidline2">Written examination carrying 80 marks and
+        Evaluation of assignments, carrying 20 marks.</li><br>
+        
+       <li id="guidline2"> The examination in written part of each theory paper shall be of 3 hours duration.</li><br>
+        
+       <li id="guidline2"> Each examinee shall have to submit three assignments in each paper separately, and, out of them, two best assignments shall be evaluated for the purpose of examination. However, in case of non submission of required number of assignment, i.e. three, the assignments submitted will not be evaluated.</li><br>
+        
+        <li id="guidline2">Practical classes shall be arranged at the study centres or at any other suitable place arranged by the University. Each practical paper shall carry 100 marks (80marks for practical and 20 marks for theory), except M.A. in Psychology, in which the duration of practical examination will be of six hours; all other practical papers will be of three hours duration.</li><br>
+        
+       <li id="guidline2"> Question for CFN/Agriculture based and UNICEF sponsored courses will be in Hindi and for PGDFM, PGDMM, PGJMC,BCA,MCA and CIC in English only.</li><br>
+</ul>
+
+
+</marquee>
+{% endblock main %}
+
+{% block first %}
+<h1 style="background-color: white; text-align: center;">Learn and Earn Honestly  </h1>
+
+<img src="{% static 'images/self1.png' %}" alt="NO image" height="955px;" width="500px;" style="margin-top: -10px;">
+{% endblock first %}
+
+{% block main2 %}
+<div class="container-fluid p-0" style="height:500px;  margin-top:10px;">
+
+<div class="col-sm-4" style="background-color:white;  border-radius:10%;  height:500px; float:right; min-height:250px;">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="{% static 'images/rudra1.jpg'%}" class="d-block w-100"  height="400px" alt="..." style="margin-top:50px;">
+  </div>
+  <div class="carousel-item">
+    <img src="{% static 'images/rudra2.jpg'%}" class="d-block w-100" height="400px" alt="..." style="margin-top:50px;">
+  </div>
+  <div class="carousel-item">
+    <img src="{% static 'images/rudra3.jpg'%}" class="d-block w-100" height="400px" alt="..." style="margin-top:50px;">
+  </div>
+</div>
+</div>
+</div>
+<div class="col-sm-8 "  style=" text-align: center; background-color:azure;   border-radius:10%; height:500px; float:left;   min-height:250px;">
+<h1 style="margin-left:20px; font-size: 25px; margin-top:25px;"><b>ADMINSTRATIVE SET UP OF TMBU</b> </h1>
+<div class="col-sm-3" style=" margin-left:60px; box-shadow: 7px 7px 25px black; background-color:white; margin-top:40px; height:230px; float:left; ">
+<img src="{% static 'images/hod3.jpeg'%}"   style=" border-radius: 50%;  padding:5px;" alt="" height="220px;" width="240px;">
+
+</div>
+
+<div class="col-sm-3"  style="margin-left:60px; box-shadow: 7px 7px 25px black;  background-color:white;margin-top:40px; height:230px; float:left;">
+<img src="{% static 'images/hod2.jpg'%}"   style=" border-radius: 50%; padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+<div class="col-sm-3"style="margin-left:60px; box-shadow: 7px 7px 25px black; background-color:white; margin-top:40px; height:230px; float:left; ">
+<img src="{% static 'images/hod1.jpg'%}"  style="  border-radius: 50%; padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+
+<div class="col-sm-3" id="hod1" style="transition: 0.8s; margin-left:60px;box-shadow: 7px 7px 25px black; background-color:white; margin-top:5px;  height:80px; float:left; ">
+<h5 style="font-size: 25px;"> <b>Shri Rajendra Vishwanath Arlekar</b></h5></div>
+<div class="col-sm-3" id="hod2" style=" transition: 0.8s; margin-left:60px; box-shadow: 7px 7px 25px black; background-color:white;  margin-top:5px; height:80px; float:left;">
+<h5 style="font-size: 25px;"> <b>Prof . Ramesh Kumar</b></h5></div>
+<div class="col-sm-3" id="hod3" style="transition: 0.8s;  margin-left:60px;box-shadow: 7px 7px 25px black; background-color:white; margin-top:5px;  height:80px; float:left; ">
+<h5 style="font-size: 25px;"> <b>Shri Rajendra Vishwanath Arlekar</b></h5></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="container-fluid " style="height:700px; background-color:lightgreen; margin-top:10px; border: 2px solid; ">'
+
+<h2 style="font-size: 40px;color: white; font-size: 50px;">Student <span style="color:black; font-size: 30px;"> Features </span><span style="color:black;">_________________</span></h2>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 140px; background-color:white;margin-top:40px; height:230px; width:250px;  float: left; ">
+<img src="{% static 'images/feature1.png'%}"  style=" margin-left: -80px;  padding:5px; " alt="" height="220px;" width="300px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature2.png'%}"  style="padding:5px; " alt="" height="230px;" width="250px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature3.png'%}"  style="   padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+<div class="col-sm-4"  style="  border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature4.png'%}"  style="  padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 140px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature5.png'%}"  style="  padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature6.png'%}"  style=" margin-left: -70px; padding:5px; " alt="" height="220px;" width="300px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature8.png'%}"  style=" margin-left: -20px;  padding:5px; " alt="" height="220px;" width="240px;">
+
+</div>
+<div class="col-sm-4"  style=" border: 2px solid; box-shadow: 7px 7px 25px black; margin-left: 65px; background-color:white;margin-top:40px; height:230px; width:250px; float:left;  ">
+<img src="{% static 'images/feature7.png'%}"  style="margin-left: -30px; padding:5px; " alt="" height="220px;" width="260px;">
+
+</div>
+
+
+
+</div>
+{% endblock main2 %}

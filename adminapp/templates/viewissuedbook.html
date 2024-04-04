@@ -1,0 +1,50 @@
+{% extends "adminparent.html" %}
+{% block body %}
+
+    <div class="row">
+        <h1 style="text-align:center;">View Issued Book</h1>   
+        <div class="col-sm-12" style="overflow:scroll;">
+            <table class="table table-bordered text-light  " style="width:60%; margin:auto;">
+                <tr>
+                    <th>Id</th>
+                    <th>Book Id </th>
+                    <th>ISBN NO</th>
+                    <th>program</th>
+                    <th>Branch</th>
+                    <th>Subject</th>
+                    <th>Bookname</th>
+                    <th>Authorname</th>
+                    <th>Roll NO </th>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Issue Date </th>
+                    <th>Due date </th>
+                    <th>Action</th>
+
+                </tr>
+                {% for b in book %}
+                <tr>
+                    <td>{{b.id}}</td>
+                    <td>{{b.bookid}}</td>
+                    <td>{{b.isbnno}}</td>
+                    <td>{{b.programe}}</td>
+                    <td>{{b.branch}}</td>
+                    <td>{{b.subject}}</td>
+                    <td>{{b.bookname}}</td>
+                    <td>{{b.authorname}}</td>
+                    <td>{{b.rollno}}</td>
+                    <td>{{b.name}}</td>
+                    <td>{{b.year}}</td>
+                    <td>{{b.issuedate}}</td>
+                    <td>{{b.duedate}}</td>
+                    <td>
+                        <a href="{% url 'adminapp:ret' id=b.id %}" >
+                            <button class="btn btn-warning ">Return </button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock body %}

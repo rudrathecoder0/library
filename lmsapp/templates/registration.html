@@ -1,0 +1,232 @@
+{% extends "parent.html" %}
+
+{% load static  %}
+{% block first %}
+<h1 style="background-color: white; text-align: center;">Enter Valid Details  </h1>
+
+<img src="{% static 'images/slef3.png' %}" alt="NO image" height="955px;" width="500px;" style="margin-top: -10px;">
+{% endblock first %}
+
+{% block main %}
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong> I hopr you are very  well . 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+{% endif %}
+<script>
+    function validate()
+    {
+        var rollno=document.getElementById("rollno");
+        var name=document.getElementById("name");
+        var fname=document.getElementById("fname");
+        var nname=document.getElementById("nname");
+        var contactno=document.getElementById("contactno")
+        var emailaddress=document.getElementById("emailaddress");
+        var password=document.getElementById("password");
+        var confirmpassord=document.getElementById("confirmpassword");
+        var emailexp=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       
+        if(rollno.value=="" || rollno.value==null)
+        {
+            alert('please Enter your RollNO / UserId');
+            rollno.focus();
+        }
+        else if(name.value=="" || name.value==null)
+        {
+            alert('please enter your name ');
+            name.focus();
+
+        }
+        else if(fname.value=="" || name.value==null)
+        {
+            alert('please enter your Father name ');
+            fname.focus();
+
+        }
+        else if(mname.value=="" || name.value==null)
+        {
+            alert('please enter your Mother name ');
+            mname.focus();
+
+        }
+        else if(contactno.value=="" || contactno.value==null)
+        {
+            alert('please Enter Your Contact NO ');
+            contactno.focus();
+
+        }
+        else if(isNaN(contactno.value))
+        {
+            alert('PLease Enter Numerical Value');
+            contactno.focus();
+
+        }
+        else if (contactno.value.length!=10)
+        {
+            alert('PLease enter charact 10 numbers');
+            contactno.focus();
+
+        }
+        else if(emailaddress.value=="" || emailaddress.value==null)
+        {
+              alert('Please Enter Email Address');
+              emailaddress.focus();
+        }
+        else if (!emailexp.test(emailaddress.value))
+        {
+            alert('Please Enter Valid Emailaddress');
+            emailaddress.focus();            
+        }
+
+        else if (password.value=="" || password.value==null)
+        {
+            alert('Please enter passord  ');
+            password.focus();
+
+        }
+
+        else if (password.value.length<8)
+        {
+            alert('please enter at least 8 character for password ');
+            password.focus();
+
+        }
+
+        else if (confirmpassword.value=="" || confirmpassword.value==null)
+        {
+            alert('Please Enter confirm password');
+            confirmpassord.focus();
+
+        }
+        else if (password.value!=confirmpassword.value)
+        {
+            alert('Your passord does not match, Try Again ');
+            confirmpassord.focus();
+        }
+        else
+        {
+            document.getElementById("frmregistration").submit();
+        }
+
+    }
+</script>
+
+<h2 style="text-align: center;">student registration form </h2>
+
+
+<form  id="frmregistration" method="post" onsubmit="event.preventDefault();validate();" class="form-group" action="{% url 'lmsapp:registration' %} ">
+    {% csrf_token %}
+    <table class="table table-active table-primary table-hover" style="width:80%;margin:auto;">
+    <tr class="">
+        <td>Enter Roll NO :-</td>
+        <td>
+            <input type="number" name="rollno" class="form-control" id="rollno"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Name </td>
+        <td>
+            <input type="text" name="name" class="form-control" id="name"/>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Father Name </td>
+        <td><input type="text" name="fname" class="form-control" id="fname" /></td>
+    </tr>
+    <tr>
+        <td>Enter Mother Name:-</td>
+        <td>
+            <input type="text" name="mname" class="form-control" id="mname"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+            <input type="radio" name="gender" value="male" class="form-check-input"/>Male
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" value="female" class="form-check-input"/>Female 
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Address</td>
+        <td>
+            <textarea name="address" class="form-control" ></textarea>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Select Programe :-</td>
+        <td>
+            <select name="programe" class="form-control">
+              <option selected>--Selected Programe--</option>
+              {% for p in program %}
+                    <option value="{{p.program}}">{{p.program}}</option>
+              {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Branch</td>
+        <td>
+            <select name="branch" class="form-control">
+                <option selected>--selected--</option>
+                {% for b in branch %}
+                    <option value="{{b.branch}}">{{b.branch}}</option>
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Selected Year </td>
+        <td>
+            <select name="year" class="form-control">
+                <option selected>---Selected---</option>
+                {% for y in year %}
+                    <option value="{{y.year}}">{{y.year}}</option>
+                {% endfor %}
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Enter contact</td>
+        <td>
+            <input  typa="number" name="contactno" class="form-control" id="contactno"/>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Email Address</td>
+        <td>
+            <input type="text" name="emailaddress" class="form-control" id="emailaddress"/>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Enter Password</td>
+        <td>
+            <input type="password" name="password" class="form-control" id="password"/>
+        </td>
+        
+    </tr>
+    <tr>
+        <td>Comfrim Password</td>
+        <td>
+            <input type="password" name="confirmpassord" class="form-control" id="confirmpassword"/>
+        </td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <button type="submit" class="btn btn-success" >Register</button>
+
+        </td>
+    </tr>
+    
+    </table>
+</form>
+
+{% endblock main %}

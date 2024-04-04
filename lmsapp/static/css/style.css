@@ -1,0 +1,73 @@
+#titlebar{
+        background-color:white;
+      }
+
+      #title1{
+        height:100%;
+        width: 100%;
+        margin:auto;
+        
+        /* float: left; */ }
+        
+      #title2{
+        height: 150px;
+        width: 15%;
+        float: left;
+      }
+     
+      #title3{
+        height: 150px;
+        width: 15%;
+        float: left;
+      }      
+ 
+
+
+
+
+    #navbar:hover{
+      color:white;
+      background-color:brown;
+      text-shadow: 5px white;
+    }
+
+    #title2{
+      background-size: cover;
+    }
+
+    #logo{
+      height: 90px;
+      width: 350px;
+      float:left;
+      border: 1px solid;
+      margin-top:0px;
+    }
+
+
+    .slider2{
+      height:350px;
+      width:300px;
+      margin-top:40px;
+      margin-left:100px;
+    
+      float:left;
+    }
+
+    .lala1{
+      height:200px;
+      width:300px;
+      margin-top:300px;
+      margin-left:100px;
+      float:left;
+      border:1px solid;
+      background-color:red;
+
+    }
+
+   #navbar2:hover{
+    font-family: cursive;
+    color:brown;
+   
+   }
+
+  
